@@ -13,3 +13,5 @@ vender/
 
 # contains credentials
 sam-tests/
+
+env/
