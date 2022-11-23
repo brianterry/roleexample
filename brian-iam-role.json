@@ -1,0 +1,48 @@
+{
+    "typeName": "brian::iam::role",
+    "description": "An example resource schema demonstrating some basic constructs and validation rules.",
+    "sourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
+    "properties": {
+        "Token": {
+            "description": "Progress token",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false,
+    "readOnlyProperties": [
+        "/properties/Token"
+    ],
+    "primaryIdentifier": [
+        "/properties/Token"
+    ],
+    "handlers": {
+        "create": {
+            "permissions": [
+                "iam:CreateRole",
+                "iam:PutRolePolicy",
+                "iam:AttachRolePolicy",
+                "iam:GetRole",
+                "iam:ListAttachedRolePolicies",
+                "iam:ListRolePolicies",
+                "iam:GetRolePolicy",
+                "cloudformation:CreateResource",
+                "cloudformation:GetResource",
+                "cloudformation:UpdateResource",
+                "cloudformation:ListResources",
+                "cloudformation:GetResourceRequestStatus" 
+            ]
+        },
+        "read": {
+            "permissions": []
+        },
+        "update": {
+            "permissions": []
+        },
+        "delete": {
+            "permissions": []
+        },
+        "list": {
+            "permissions": []
+        }
+    }
+}
